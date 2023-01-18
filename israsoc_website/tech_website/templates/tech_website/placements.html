@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2>Placements</h2>
+<table class="inventory-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Institution</th>
+            <th>Tag</th>
+            <th>Location</th>
+            <th>Funding</th>
+            <th>Application Deadline</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for placement in placements %}
+        <tr>
+            <td>{{ placement.title }}</td>
+            <td>{{ placement.institution }}</td>
+            <td>{{ placement.tag}}</td>
+            <td>{{ placement.location }}</td>
+            <td>{{ placement.funding }}</td>
+            <td>{{ placement.application_deadline }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
