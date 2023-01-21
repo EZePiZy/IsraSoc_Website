@@ -27,11 +27,8 @@ hr {
 
 header {
     background-color: #83aefc;
-    min-height: 200px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    align-items: flex-start;
+    /* min-height: 200px; */
+    height: 15vh;
     padding-left: 40px;
 }
 
@@ -47,11 +44,11 @@ main h2 {
 }
 
 .app {
-    min-width: 800px;
-    max-width: 60%;
+    /* min-width: 800px; */
+    max-width: 95%;
     margin: 0 auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-}
+} 
 
 
 .clear { 
@@ -113,9 +110,10 @@ header p {
 }
 
 .navbar {
-    margin-top: 50px;
     display: flex;
     width: 100%;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .navbar a {
@@ -139,7 +137,8 @@ main table {
 }
 
 .header-first-row {
-    width: 100%;
+    /* width: 100%; */
+    height: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -222,7 +221,7 @@ main form input[type=submit] {
     <div class="app">
         <header>
             <div class="header-first-row">
-                <h1 class="title">ICL Israel Tech Society</h1>
+                <h1 class="title">ICL Israel Tech</h1>
                 <nav class="navbar">
                     {% url 'home' as home_url %}
                     {% url 'events' as events_url %}
