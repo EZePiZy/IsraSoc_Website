@@ -1,13 +1,62 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h2>Placements</h2>
-<table class="inventory-table">
+
+<style>
+    .placement-items:hover {
+        background-color:rgb(77, 248, 65);
+        border: solid 10px rgb(77, 248, 65);
+        border-radius: 5px;
+    }
+    .th, .td {
+        border-bottom: 1px solid #ddd;
+    }
+    .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    .styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }   
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+
+    .styled-table tbody tr:nth-child(even) {
+        font-weight: bold;
+        color: #009879;
+    }
+
+
+
+</style>
+
+
+<h2 style="text-transform: uppercase; color:#009879">Placements</h2>
+<table class="styled-table">
     <thead>
         <tr>
             <th>Title</th>
             <th>Institution</th>
-            <th>Tag</th>
             <th>Location</th>
             <th>Funding</th>
             <th>Application Deadline</th>
@@ -15,10 +64,9 @@
     </thead>
     <tbody>
         {% for placement in placements %}
-        <tr>
+        <tr class="placement-items">
             <td>{{ placement.title }}</td>
             <td>{{ placement.institution }}</td>
-            <td>{{ placement.tag}}</td>
             <td>{{ placement.location }}</td>
             <td>{{ placement.funding }}</td>
             <td>{{ placement.application_deadline }}</td>

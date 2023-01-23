@@ -6,6 +6,8 @@ media/
 # Javascript
 node_modules/
 bundles/
+yarn.lock
+vercel.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -147,3 +149,4 @@ dmypy.json
 
 # Other
 .DS_Store
+.vercel

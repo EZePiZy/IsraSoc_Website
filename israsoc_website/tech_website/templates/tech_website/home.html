@@ -55,110 +55,88 @@
 /***************************************
 banner
 ***************************************/
-    .welcome {
-        margin: 30px;
+    .containerBox {
         position: relative;
-        border: 1px solid black;
+        display: inline-block;
+        margin: 15px;
+        margin-bottom: 20px;
     }
 
-    .text-welcome {
-        position: absolute;
-        top: 17px;
-        left: 230px;
-        font-size: 35px;
-        font-weight: 900;
-        text-align: center;
-        }
-
-    .text-2-welcome {
-        position: absolute;
-        bottom: 150px;
-        left: 10px;
-        text-shadow: 0.3px 0.3px 0.3px rgb(27, 143, 176);
+    .promo {
         font-size: 25px;
-        line-height: 35pt;
         text-align: center;
-        font-style: bold;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #FFF;
+        line-height: 20pt;
+        padding: 10px;
+        margin-top: -3em;
+        background-color: #000;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
     }
 
-    .text-3-welcome {
-        position: absolute;
-        bottom: 17px;
-        left: 385px;
-        font-size: 40px;
-        text-align: center;
-        font-style: bold;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-transform: uppercase;
+    .text-box {
+        position: absolute;    
+        height: 100%;
+        border-radius: 15px;
+        text-align: center;    
+        width: 100%;
+        background: 
+            linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        );
+    }
+    .text-box:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
     }
 
+    h4 {
+        top:50px;
+        display: inline-block;
+        font-size: 35px; /*or whatever you want*/
+        color: rgb(255, 255, 255);
+        line-height: 2em; 
+        text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
+    }
 
-    .background-image {
-        background-size: cover;
+    img {
         display: block;
-        background-position: center;
-        opacity: 0.3;
+        max-width: 100%;
+        height: auto;
     }
 
     #u {
-        color: blue;
+        color: yellow;
     }
 
 
-    @media (max-width: 768px) {
-        .background-image {
-            background-size: 700px;
-            display: block;
-            background-position: center;
-            opacity: 0.3;
-        }
 
-        .welcome {
-            margin: 30px;
-            position: relative;
-            border: 1px solid black;
+    @media (max-width:768px) {
+        h4 {
+            display: inline-block;
+            font-size: 10px; /*or whatever you want*/
+            color: rgb(255, 255, 255);
+            line-height: 2em;
+            text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
         }
-
-        .text-welcome {
-            position: absolute;
-            top: 5px;
-            left: 32px;
-            font-size: 12px;
-            font-weight: 900;
+        .promo {
+            font-size: 8px;
             text-align: center;
+            color: #FFF;
+            line-height:8pt;
+            padding: 5px;
+            margin-top: -2em;
+            background-color: #000;
+            border: 2px black;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
         }
-
-        .text-2-welcome {
-            position: center;
-            bottom: 30px;
-            left: 10px;
-            font-size: 5px;
-            line-height: 10pt;
-            text-shadow: 0.3px 0.3px 0.3px rgb(27, 143, 176);
-            font-style: bold;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .text-3-welcome {
-            position: absolute;
-            bottom: 3px;
-            left: 105px;
-            font-size: 7px;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-transform: uppercase;
-        }
-
-        .background-image {
-            background-size: cover;
-            display: block;
-            background-position: center;
-            opacity: 0.3;
-        }
-
         #u {
-            font-size: 7px;
+            font-size: 9px;
+            text-transform: uppercase;
         }
     }
 /***************************************
@@ -175,10 +153,14 @@ services
 
     .fa-li {
         color: green;
+        position: absolute; 
+        top: 0.5em;
+        text-align: center;
     }
 
     .fa-ul {
         color: rgb(18, 14, 14);
+        top: 0.5em;
         font-weight: bolder;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -190,16 +172,20 @@ services
             font-size: 8px;
             padding: 15px;
             line-height: 10pt;
-            margin: 15px;
+            margin: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .fa-li {
             color: green;
+            top: 0.5em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .fa-ul {
             color: rgb(18, 14, 14);
             font-weight: bolder;
+            top: 0.5em;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
     }
@@ -262,6 +248,7 @@ Feedback
         font-size: larger;
         color: #000;
         padding: 20px;
+        width: 100%;
         margin-top: 5px;
         margin-bottom: 5px;
         border-radius: 10px;
@@ -304,7 +291,7 @@ tech-trip img
                     max-width: 290px;
                     border: 5px solid rgb(41, 48, 46);
                     border-radius: 5px;
-                }
+        }
     }
 
     .slideshow {
@@ -328,17 +315,26 @@ tech-trip img
 /***************************************
 contact us
 ***************************************/
-    .space {
-        margin-top: 40px;
+    .col-md-1, .col-sm-1 {
+        padding: 0;
+        color: black;
     }
 
+    .space {
+        padding-top: 25px;
+    }
+
+    .fa-fw {
+        width: 30px;
+        text-align: center;
+    }
+ 
     .logo {
         display: flex;
         justify-content: center;
         gap: 7px;
         margin: 10px;          
-    }
-
+    } 
 /***************************************
 footer
 ***************************************/
@@ -440,32 +436,25 @@ footer
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <!--banner-->
 
-    <div class="welcome">
-        <img src="{% static 'img/background.jpg' %}" class="background-image" width="100%">
-        <h3 class="text-welcome">
-            <p>March 26th 2023 - April 2nd 2023</p>
-        </h3>
-        <h3 class="text-2-welcome">
-            <p>We promote Israeli <text id="u">Culture, Science and Technology</text>.
+    <div class="containerBox">
+        <div class="text-box">
+            <h4>March 26th 2023 - April 2nd 2023 <br><a href="https://forms.gle/xJxtnR8fGGwHu4qL6" style="color: black; border: solid 5px yellow; border-radius: 10px; background-color: yellow; text-shadow: 0.3px 0.3px 0.3px rgb(0, 0, 0);"> Get Started! </a></h4>
+            <p class="promo">We promote Israeli <text id="u">Culture, Science and Technology</text>.
                 We connect Imperial students to key players in thriving <text id="u">Israeli Tech Sector</text>.
                 We offer students first-hand insight into the <text id="u">Start-Up Nation</text> from an
-                apolitical and non-religious lens.</p>
-        </h3>
-        <h3 class="text-3-welcome">
-            <p>
-                <a href="apply">Apply NOW!</a>
-            </p>
-        </h3>
+                apolitical and non-religious lens</p>
+        </div>
+        <img class="img-responsive" src="{% static 'img/background.jpg' %}" style="border-radius: 15px;"/>
     </div>
-
+  
     <!--/ banner-->
 
 
     <div class="service">
         <ul class="fa-ul">
-            <li><i class="fa-li fa fa-check-square"></i>1st Concentration Of Startups Per Capita</li>
-            <li><i class="fa-li fa fa-check-square"></i>+ £1480 Salary Per Month</li>
-            <li><i class="fa-li fa fa-check-square"></i>100% Unique Experience</li>
+            <li><i class="fa-li fa fa-check-square" style="top:0.5em;"></i>Highest Concentration of Startups per Capita</li>
+            <li><i class="fa-li fa fa-check-square" style="top:0.5em;"></i>+ £1480 Salary per Month (Tech Program)</li>
+            <li><i class="fa-li fa fa-check-square" style="top:0.5em;"></i>100% Unique Experience</li>
         </ul>
     </div>
 
@@ -479,7 +468,7 @@ footer
                 <script type="text/javascript">
                     $(function () {
                         setInterval(function () {
-                            $(".slideshow ul").animate({ marginLeft: -430 }, 600, function () {
+                            $(".slideshow ul").animate({ marginLeft: -100 }, 800, function () {
                                 $(this).css({ marginLeft: 0 }).find("li:last").after($(this).find("li:first"));
                             })
                         }, 6000);
@@ -511,7 +500,7 @@ footer
             <div class="row">
                 <div class="col-md-5 col-sm-6 col-xs-12">
                     <div class="section-title">
-                        <h2 class="head-title lg-line">THE TECHTRIP </h2>
+                        <h2 class="head-title lg-line">THE TECH TRIP </h2>
                         <hr class="botm-line">
                         <p class="sec-para">
                             <br>Embark on an unforgettable Adventure with us! Join over 40 fellow students from
@@ -544,7 +533,7 @@ footer
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="ser-title">Discover our team !</h2>
+                    <h2 class="ser-title">Discover our team!</h2>
                     <hr class="botm-line">
                 </div>
                 <link rel="stylesheet"
@@ -666,7 +655,7 @@ footer
                         </defs>
                     </svg>
                     <div>
-                        <h4>Liu</h4>
+                        <h3>Liu</h3>
                     </div>
                 </header>
                 <p style="background-color: #ededed;">Nothing has ever been given to Israeli people for free -
@@ -737,7 +726,7 @@ footer
                         </defs>
                     </svg>
                     <div>
-                        <h4>Vincent</h4>
+                        <h3>Vincent</h3>
                     </div>
                 </header>
                 <p style="background-color: #ededed;">This trip surpassed my expectations. I was expecting a 5-7
@@ -796,7 +785,7 @@ footer
                         </defs>
                     </svg>
                     <div>
-                        <h4>Ephraim</h4>
+                        <h3>Ephraim</h3>
                     </div>
                 </header>
                 <p style="background-color: #ededed;">It is a massive success. Because of this trip, I have changed my
@@ -816,18 +805,18 @@ footer
                 </div>
                 <div class="col-md-12 col-sm-12">
                     <div class="col-md-1 col-sm-1 space">
-                        <i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>
+                        <i class="fa fa-map-marker fa-fw pull-left fa-2x" style="color: #e11212;"></i>
                     </div>
                     <div class="col-md-5 col-sm-5 space">
-                        <p>Imperial College Israel Tech Committee Members<br>Exhibition Rd, South Kensington, London SW7
+                        <p style="color: black;">Imperial College Israel Tech Committee Members<br>Exhibition Rd, South Kensington, London SW7
                             2BX
                         </p>
                     </div>
                     <div class="col-md-1 col-sm-1 space">
-                        <i class="fas fa-envelope fa-fw pull-left fa-2x"></i>
+                        <i class="fas fa-envelope fa-fw pull-left fa-2x" style="color:#222222;"></i>
                     </div>
                     <div class="col-md-5 col-sm-5 space">
-                        <p>ezra.reich21@imperial.ac.uk</p>
+                        <p style="color: black;">ezra.reich21@imperial.ac.uk</p>
                     </div>
                 </div>
             </div>
@@ -853,7 +842,7 @@ footer
                     </div>
                     <div class="col-md-3 col-sm-3 marb20">
                         <div class="ftr-tle">
-                            <h4 class="white no-padding">Follow us</h4>
+                            <h3 class="white no-padding">Follow us</h3>
                         </div>
                         <div class="info-sec">
                             <ul class="social-icon">
