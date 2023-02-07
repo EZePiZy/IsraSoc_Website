@@ -117,9 +117,18 @@ header p {
 
 .navbar {
     display: flex;
-    width: 100%;
+    width: 45%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media (max-width:768px) {
+    .navbar {
+    display: flex;
+    width: 50%;
     flex-direction: column;
     justify-content: center;
+    }   
 }
 
 .navbar a {
@@ -238,6 +247,8 @@ main form input[type=submit] {
                         href="{% url 'events' %}">Events</a>
                     <a class="nav-item{% if request.path == placements_url %} current-page {% endif %}"
                         href="{% url 'placements' %}">Placements</a>
+                    <a 
+                        href="https://forms.gle/xJxtnR8fGGwHu4qL6">Apply</a>
                 </nav>
             </div>
         </header>
